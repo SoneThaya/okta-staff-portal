@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <Security
-        issuer={`${process.env.REACT_APP_OKTA_ISSUER_URI}/oauth2/default`}
+        issuer={process.env.REACT_APP_OKTA_ISSUER_URI}
         clientId={process.env.REACT_APP_CLIENT_ID}
         redirectUri={window.location.origin + '/implicit/callback'}
         onAuthRequired={onAuthRequired}
@@ -29,7 +29,7 @@ function App() {
             <SecureRoute path="/staff" exact component={Staff} />
             <Route
               path='/login'
-              render={() => <Login issuer={`${process.env.REACT_APP_OKTA_ISSUER_URI}/oauth2/default`} />} />
+              render={() => <Login issuer={process.env.REACT_APP_OKTA_ISSUER_URI} />} />
             <Route path='/implicit/callback' component={LoginCallback} />
           </div>
         </div>
