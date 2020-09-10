@@ -8,6 +8,7 @@ class SignInWidget extends Component {
     const el = ReactDOM.findDOMNode(this);
     this.widget = new OktaSignIn({
       baseUrl: this.props.baseUrl,
+      logo: 'logo.png',
       authParams: {
         // If your app is configured to use the Implicit Flow 
         // instead of the Authorization Code with Proof of Code Key Exchange (PKCE)

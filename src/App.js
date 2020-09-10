@@ -9,7 +9,7 @@ import Login from './components/auth/Login';
 import './App.css';
 
 function onAuthRequired({ history }) {
-  history.push('/login')
+  // history.push('/login')
 }
 
 function App() {
